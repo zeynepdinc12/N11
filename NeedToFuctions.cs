@@ -54,21 +54,26 @@ namespace KeytorcTest
         /// tıklanır. Daha sonra ekranda çıkacak olan "Ürünüz silindi" mesajı beklenir. Bundan sonra ekran görüntüsü
         /// alınır ve mesaj kapatılır.
         /// </summary>
+        /// 
         [Test]
         public void Islemler()
-        {   LoginProcesses();
+        {
+            LoginProcesses();
             Verify(UserName(), "zeynep Dinç", "Kullanıcı Girişi Başarısız");
-            FileProcesses("UserName","Kullanici girisi saglandi. Adim 2 basarili. Adim 3 baslatiliyor:");
+            FileProcesses("zeynep Dinç","Kullanici girisi saglandi. Adim 2 basarili. Adim 3 baslatiliyor:");
             Logger.LogMessage("Kullanici girisi saglandi Adim 2 basarili. Adim 3 Baslatiliyor:");
+
             SearchProcesses();
             Verify(BreadCrumb(), "samsung", "Urun ismi dogru aratilamadi");
-            FileProcesses("BreadCrumb","Urün aratildi ve kayit kontrol edildi. Adim 3 başarili. Adim 4 Baslatiliyor:");
+            FileProcesses("BreadCrumb", "Urün aratildi ve kayit kontrol edildi. Adim 3 başarili. Adim 4 Baslatiliyor:");
             Logger.LogMessage("Ürün aratıldı ve  kayıt kontrol edildi. Adım 3 başarılı. Adım 4 Başlatılıyor:");
+
             SelectProcesses();
-            FileProcesses("SelectProcesses","2. sayfaya gecildi. Bu durum ekran goruntusu alinarak dogrulandi.Urun favorilere eklendi.Adim 4 başarili. Adim 5 başlatiliyor");
+            FileProcesses("SelectProcesses", "2. sayfaya gecildi. Bu durum ekran goruntusu alinarak dogrulandi.Urun favorilere eklendi.Adim 4 başarili. Adim 5 başlatiliyor");
             Logger.LogMessage("2. sayfaya geçildi. Bu durum ekran görüntüsü alınarak doğrulandı.Ürün favorilere eklendi.Adım 4 başarılı. Adım 5 başlatılıyor");
+
             MoveToFavorite();
-            FileProcesses("MoveToFavorite","Urun favorilere kaldırıldı.Buna iliskin ekran goruntusu alindi ve dogrulama saglandi.Adim 5 basarili.");
+            FileProcesses("MoveToFavorite", "Urun favorilere kaldırıldı.Buna iliskin ekran goruntusu alindi ve dogrulama saglandi.Adim 5 basarili.");
             Logger.LogMessage("urun favorilerden kaldırıldı.Adım 5 başarılı.");
         }
         /// <summary>
