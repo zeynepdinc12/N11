@@ -19,8 +19,8 @@ namespace KeytorcTest
         private readonly String passwordId = "password";
         private readonly String secondPageId = "//*[@id='contentListing']/div/div/div[2]/div[4]/a[2]";
         private readonly String favoriteId = "/html/body/div[1]/div[3]/div/div/div[2]/section[1]/div[2]/ul/li[2]/div/div[1]/span";
-        private readonly String emailName = "zeynepdinc.23@gmail.com";
-        private readonly String passwordName = "23N2020";
+        private readonly String emailName = "yourMail";
+        private readonly String passwordName = "yourPassword";
         private readonly String url = "http://www.n11.com";
        
         public IWebElement UserName()
